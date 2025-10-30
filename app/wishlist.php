@@ -57,7 +57,7 @@ $items = array_reverse(load_items());
     </div>
 
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4 m-2">
-        <h2 class="text-center text-2xl font-bold mb-2 text-gray-600">Mások kívánságai</h2>
+        <h2 class="text-center text-2xl font-bold mb-2 text-gray-600">Kívánságok</h2>
         <ul class="list-none p-0 m-0">
             <?php if (empty($items)): ?>
                 <li class="text-center text-gray-500">Még nincs kívánság 🌟</li>
