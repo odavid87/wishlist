@@ -32,14 +32,14 @@ if (!$authenticated) {
 </head>
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
-    <a href="/" class="block text-center mb-8 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
-    <h1 class="text-center text-4xl font-bold mb-8 text-red-700">🎄 Családi Kívánságlista</h1>
+    <a href="/" class="block text-center mb-2 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
+    <h1 class="text-center text-4xl font-bold mb-4 text-red-700">🎄 Családi Kívánságlista</h1>
 
     <?php if (isset($error_message)): ?>
-        <p class="text-center text-red-500 mb-4"><?= $error_message ?></p>
+        <p class="text-center text-red-500 mb-2"><?= $error_message ?></p>
     <?php endif; ?>
 
-    <form method="post" class="flex flex-col gap-2 mb-8">
+    <form method="post" class="flex flex-col gap-2 mb-2">
         <input type="password" name="password" placeholder="Jelszó" required class="p-2 text-base rounded-lg border border-gray-300">
         <button type="submit" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg">Belépés</button>
     </form>
@@ -61,18 +61,28 @@ $items = array_reverse(load_items());
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
-    <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
+    <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4 text-center">
         <a href="/" class="block text-center mb-8 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
-        <h1 class="text-center text-2xl font-bold mb-8 text-red-700">🎄 Családi Kívánságlista</h1>
-
-        <form action="add.php" method="post" class="flex flex-col gap-2 mb-8">
-            <input type="text" name="who" placeholder="Ki kívánja?" required class="p-2 text-base rounded-lg border border-gray-300">
-            <input type="text" name="wish" placeholder="Mit szeretnél?" required class="p-2 text-base rounded-lg border border-gray-300">
-            <button type="submit" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg">➕ Hozzáadás</button>
-        </form>
+        <h1 class="text-center text-2xl font-bold mb-2 text-red-700">🎄 Családi Kívánságlista</h1>
     </div>
+
+    <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-6 m-2 text-center">
+<!--        <button id="showWishFormBtn" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg mb-2">-->
+        <button id="showWishFormBtn" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">
+            Van egy kívánságom!
+        </button>
+
+        <div id="wishForm" class="hidden">
+            <form action="add.php" method="post" class="flex flex-col gap-2 mb-2">
+                <input type="text" name="who" placeholder="Ki kívánja?" required class="p-2 text-base rounded-lg border border-gray-300">
+                <input type="text" name="wish" placeholder="Mit szeretnél?" required class="p-2 text-base rounded-lg border border-gray-300">
+                <button type="submit" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg">➕ Hozzáadás</button>
+            </form>
+        </div>
+    </div>
+
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4 m-2">
-        <h2 class="text-center text-2xl font-bold mb-4 text-gray-600">Kívánságok</h2>
+        <h2 class="text-center text-2xl font-bold mb-2 text-gray-600">Mások kívánságai</h2>
         <ul class="list-none p-0 m-0">
             <?php if (empty($items)): ?>
                 <li class="text-center text-gray-500">Még nincs kívánság 🌟</li>
@@ -83,11 +93,18 @@ $items = array_reverse(load_items());
                             <strong class="text-base"><?= $item['who'] ?></strong>
                             <span class="text-sm"><?= $item['wish'] ?></span>
                         </div>
-                        <small class="text-gray-500 text-xs"><?= $item['added_at'] ?></small>
                     </li>
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>
     </div>
+    <script>
+        document.getElementById('showWishFormBtn').addEventListener('click', function() {
+            let form = document.getElementById('wishForm');
+            let button = document.getElementById('showWishFormBtn');
+            form.classList.toggle('hidden');
+            button.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
