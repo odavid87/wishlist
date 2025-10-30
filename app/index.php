@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="utf-8">
-    <title>Családi Wishlist 🎁</title>
+    <title>Családi Kívánságlista 🎁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -10,10 +10,9 @@
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
     <section class="text-center py-16">
-        <img src="https://i.imgur.com/Rvcewzx.png" alt="Karácsonyi ajándék" class="max-w-xs mb-8 mx-auto">
-        <h1 class="text-4xl font-bold mb-4 text-red-700">Családi Wishlist</h1>
+        <h1 class="text-4xl font-bold mb-4 text-red-700">Családi Kívánságlista</h1>
         <p class="text-lg text-gray-500 mb-8">Oszd meg egyszerűen a karácsonyi kívánságlistádat a családdal!</p>
-        <a href="/wishlist.php" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">Tovább a listához</a>
+        <a href="/wishlist.php" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">Tovább a kívánságokhoz</a>
     </section>
 
     <section class="mt-16 px-4">
