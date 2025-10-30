@@ -49,7 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1 class="text-center text-2xl font-bold mb-4 text-red-700">Kívánság szerkesztése</h1>
     <form method="post" class="flex flex-col gap-2 mb-2">
         <input type="text" name="who" value="<?= $item_to_edit['who'] ?>" required class="p-2 text-base rounded-lg border border-gray-300">
-        <input type="text" name="wish" value="<?= $item_to_edit['wish'] ?>" required class="p-2 text-base rounded-lg border border-gray-300">
+        <textarea rows="10" id="wish" name="wish" placeholder="Mit szeretnél?" required class="p-2 text-base rounded-lg border border-gray-300 text-sm"><?= $item_to_edit['wish'] ?></textarea>
+
         <button type="submit" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg">Mentés</button>
     </form>
     <a href="/wishlist.php" class="block text-center mt-4 text-gray-500 no-underline hover:text-gray-900">Mégse</a>

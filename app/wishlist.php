@@ -50,7 +50,7 @@ $items = array_reverse(load_items());
         <div id="wishForm" class="hidden">
             <form action="add.php" method="post" class="flex flex-col gap-2 mb-2">
                 <input type="text" name="who" placeholder="Ki kívánja?" required class="p-2 text-base rounded-lg border border-gray-300">
-                <input type="text" name="wish" placeholder="Mit szeretnél?" required class="p-2 text-base rounded-lg border border-gray-300">
+                <textarea rows="10" id="wish" name="wish" placeholder="Mit szeretnél?" required class="p-2 text-base rounded-lg border border-gray-300 text-sm"></textarea>
                 <button type="submit" class="bg-red-700 text-white cursor-pointer transition duration-200 hover:bg-red-800 p-2 text-base rounded-lg">➕ Hozzáadás</button>
             </form>
         </div>
@@ -63,14 +63,14 @@ $items = array_reverse(load_items());
                 <li class="text-center text-gray-500">Még nincs kívánság 🌟</li>
             <?php else: ?>
                 <?php foreach ($items as $item): ?>
-                    <li class="bg-gray-50 m-1 p-2 rounded-lg flex justify-between items-center flex-wrap">
+                    <li class="bg-gray-50 m-1 p-2 rounded-lg">
                         <div class="flex flex-col">
                             <strong class="text-base"><?= $item['who'] ?></strong>
-                            <span class="text-sm"><?= $item['wish'] ?></span>
+                            <span class="text-sm"><?= nl2br($item['wish']) ?></span>
                         </div>
-                        <div class="flex gap-2">
+                        <div class="flex gap-4 justify-end mt-2">
                             <a href="edit.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-blue-500"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="delete.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-red-500"><i class="fas fa-trash-alt"></i></a>
+                            <a href="delete.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-red-500" onclick="return confirm('Biztosan törlöd?');"><i class="fas fa-trash-alt"></i></a>
                         </div>
                     </li>
                 <?php endforeach; ?>
