@@ -32,6 +32,11 @@ $items = array_reverse(load_items());
 <head>
     <meta charset="utf-8">
     <title>Huncutkák kívánságai 🎁</title>
+    <meta name="description" content="Oszd meg egyszerűen az ünnepi kívánságlistádat a családdal!">
+    <meta property="og:title" content="Huncutkák kívánságai 🎁">
+    <meta property="og:description" content="Oszd meg egyszerűen az ünnepi kívánságlistádat a családdal!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mamahuncutkai.hu/wishlist.php">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
