@@ -44,7 +44,7 @@ $items = array_reverse(load_items());
 
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-6 m-2 text-center">
         <button id="showWishFormBtn" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">
-            Van egy kívánságom!
+            Van egy kívánságom! 🎁
         </button>
 
         <div id="wishForm" class="hidden">
@@ -65,7 +65,7 @@ $items = array_reverse(load_items());
                 <?php foreach ($items as $item): ?>
                     <li class="bg-gray-50 m-1 p-2 rounded-lg">
                         <div class="flex flex-col">
-                            <strong class="text-base"><?= $item['who'] ?></strong>
+                            <strong class="text-base">⭐<?= $item['who'] ?>⭐ kívánsága</strong>
                             <span class="text-sm"><?= nl2br($item['wish']) ?></span>
                         </div>
                         <div class="flex gap-4 justify-end mt-2">

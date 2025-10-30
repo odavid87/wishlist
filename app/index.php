@@ -9,9 +9,10 @@
 </head>
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
-    <section class="text-center py-16">
+    <section class="text-center py-8">
+        <h1 class="text-4xl font-bold mb-4 text-red-700">🎁</h1>
         <h1 class="text-4xl font-bold mb-4 text-red-700">Családi Kívánságlista</h1>
-        <p class="text-lg text-gray-500 mb-8">Oszd meg egyszerűen a karácsonyi kívánságlistádat a családdal!</p>
+        <p class="text-lg text-gray-500 mb-8">Oszd meg egyszerűen az ünnepi kívánságlistádat a családdal!</p>
         <a href="/wishlist.php" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">Tovább a kívánságokhoz</a>
     </section>
 
@@ -26,12 +27,12 @@
             <div class="text-center flex-1">
                 <i class="fas fa-share-alt text-red-700 text-4xl mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">2. Oszd meg a családdal</h3>
-                <p class="text-gray-500">A lista egy közös oldalon jelenik meg, amit az egész család lát.</p>
+                <p class="text-gray-500">A lista egy közös oldalon jelenik meg, amit az egész család láthat.</p>
             </div>
             <div class="text-center flex-1">
                 <i class="fas fa-gift text-red-700 text-4xl mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">3. Nincs több fejtörés</h3>
-                <p class="text-gray-500">Mindenki tudni fogja, minek örülnél a fa alatt.</p>
+                <p class="text-gray-500">Mindenki tudni fogja, minek örülnél.</p>
             </div>
         </div>
     </section>
