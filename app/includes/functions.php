@@ -14,7 +14,14 @@ function save_items(array $items) {
 
 function add_item($who, $wish) {
     $items = load_items();
+    $max_id = 0;
+    foreach ($items as $item) {
+        if (isset($item['id']) && $item['id'] > $max_id) {
+            $max_id = $item['id'];
+        }
+    }
     $items[] = [
+        'id' => $max_id + 1,
         'who' => htmlspecialchars($who),
         'wish' => htmlspecialchars($wish),
         'added_at' => date('Y-m-d H:i')
