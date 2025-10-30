@@ -1,6 +1,8 @@
 <?php
+session_start();
 require __DIR__ . '/includes/config.php';
 require __DIR__ . '/includes/functions.php';
+require __DIR__ . '/includes/auth.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $items = load_items();
