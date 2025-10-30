@@ -9,7 +9,8 @@
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
     <a href="/" class="block text-center mb-2 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
-    <h1 class="text-center text-2xl font-bold mb-4 text-red-700">🎁 Huncutkák kívánságai</h1>
+    <img src="/assets/favicon/android-chrome-512x512.png" alt="Mama huncutkái" class="my-4">
+    <h1 class="text-center text-2xl font-bold mb-4 text-red-700">🎁 Mi a jelszó, Te kis huncut?</h1>
 
     <?php if (isset($error_message)): ?>
         <p class="text-center text-red-500 mb-2"><?= $error_message ?></p>

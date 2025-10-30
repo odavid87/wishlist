@@ -21,7 +21,8 @@
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
     <section class="text-center py-8">
-        <h1 class="text-4xl font-bold mb-4 text-red-700">🎁👵</h1>
+        <img src="/assets/favicon/android-chrome-512x512.png" alt="Mama huncutkái" class="mb-4">
+<!--        <h1 class="text-4xl font-bold mb-4 text-red-700">🎁👵</h1>-->
         <h1 class="text-4xl font-bold mb-4 text-red-700">Huncutkák kívánságai</h1>
         <p class="text-lg text-gray-500 mb-8">Oszd meg egyszerűen az ünnepi kívánságlistádat a családdal!</p>
         <a href="/wishlist.php" class="bg-red-700 text-white px-8 py-4 rounded-lg text-lg transition duration-200 hover:bg-red-800">Tovább a kívánságokhoz</a>
