@@ -2,14 +2,14 @@
 <html lang="hu">
 <head>
     <meta charset="utf-8">
-    <title>Családi Kívánságlista 🎁</title>
+    <title>Huncutkák kívánságai 🎁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
 <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4">
     <a href="/" class="block text-center mb-2 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
-    <h1 class="text-center text-2xl font-bold mb-4 text-red-700">🎁 Családi Kívánságlista</h1>
+    <h1 class="text-center text-2xl font-bold mb-4 text-red-700">🎁 Huncutkák kívánságai</h1>
 
     <?php if (isset($error_message)): ?>
         <p class="text-center text-red-500 mb-2"><?= $error_message ?></p>

@@ -31,15 +31,15 @@ $items = array_reverse(load_items());
 <html lang="hu">
 <head>
     <meta charset="utf-8">
-    <title>Családi Kívánságlista 🎁</title>
+    <title>Huncutkák kívánságai 🎁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-50 m-0 p-4 md:p-8">
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-4 text-center">
-        <a href="/" class="block text-center mb-8 text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
-        <h1 class="text-center text-2xl font-bold mb-2 text-red-700">🎁 Családi Kívánságlista</h1>
+        <a href="/" class="block text-center text-gray-500 no-underline hover:text-gray-900">Vissza a főoldalra</a>
+<!--        <h1 class="text-center text-2xl font-bold mb-2 text-red-700">🎁 Huncutkák kívánságai</h1>-->
     </div>
 
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-6 m-2 text-center">
@@ -63,7 +63,7 @@ $items = array_reverse(load_items());
                 <li class="text-center text-gray-500">Még nincs kívánság 🌟</li>
             <?php else: ?>
                 <?php foreach ($items as $item): ?>
-                    <li class="bg-gray-50 m-1 p-2 rounded-lg">
+                    <li class="bg-gray-50 m-1 my-2 p-2 rounded-lg">
                         <div class="flex flex-col gap-2">
                             <strong class="text-base">⭐<?= $item['who'] ?>⭐ kívánsága</strong>
                             <span class="text-sm"><?= nl2br($item['wish']) ?></span>
