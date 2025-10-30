@@ -45,8 +45,7 @@ $items = array_reverse(load_items());
                             </span>
                         </div>
                         <div class="flex gap-4 justify-end mt-2">
-                            <a href="edit.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-blue-500"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="delete.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-red-500" onclick="return confirm('Biztosan törlöd?');"><i class="fas fa-trash-alt"></i></a>
+                            <button class="share-wish-btn text-gray-400 hover:text-blue-500" data-id="<?= $item['id'] ?>"><i class="fas fa-share-alt"></i></button>
                         </div>
                     </li>
                 <?php endforeach; ?>
@@ -74,6 +73,26 @@ $items = array_reverse(load_items());
             let button = document.getElementById('showWishFormBtn');
             form.classList.toggle('hidden');
             button.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.share-wish-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const wishId = this.dataset.id;
+                const permalink = window.location.origin + '/wish.php?id=' + wishId;
+
+                navigator.clipboard.writeText(permalink).then(() => {
+                    const feedbackMessage = document.createElement('div');
+                    feedbackMessage.textContent = 'URL a vágólapra másolva!';
+                    feedbackMessage.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000;';
+                    document.body.appendChild(feedbackMessage);
+
+                    setTimeout(() => {
+                        feedbackMessage.remove();
+                    }, 3000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
         });
     </script>
 </body>
