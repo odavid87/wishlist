@@ -16,5 +16,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         add_item($who, $wish);
     }
 }
-header('Location: /');
+header('Location: /wishlist.php');
 exit;
