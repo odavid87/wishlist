@@ -22,7 +22,7 @@
             <div class="text-center flex-1">
                 <i class="fas fa-pencil-alt text-red-700 text-4xl mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2">1. Add meg a kívánságod</h3>
-                <p class="text-gray-500">Egyszerűen add meg a neved és hogy mit szeretnél karácsonyra.</p>
+                <p class="text-gray-500">Egyszerűen add meg a neved és hogy milyen ajándékra vágysz.</p>
             </div>
             <div class="text-center flex-1">
                 <i class="fas fa-share-alt text-red-700 text-4xl mb-4"></i>
