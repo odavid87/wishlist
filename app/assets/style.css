@@ -1,0 +1,79 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(160deg, #fff, #eaf3ff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.wish-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.wish-form input, .wish-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.wish-form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.wish-form button:hover {
+    background-color: #43a047;
+}
+
+.wishlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wishlist li {
+    background: #f9f9f9;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wishlist li .wish {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
