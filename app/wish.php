@@ -20,7 +20,7 @@ if (!$item_to_display) {
     exit;
 }
 
-$pageTitle = htmlspecialchars($item_to_display['who']) . " kívánsága: " . htmlspecialchars($item_to_display['wish']);
+$pageTitle = htmlspecialchars($item_to_display['who']) . " kívánsága";
 $pageDescription = "Nézd meg " . htmlspecialchars($item_to_display['who']) . " kívánságát: " . htmlspecialchars($item_to_display['wish']);
 $pageUrl = "https://mamahuncutkai.hu/wish.php?id=" . $id;
 $ogImage = "https://mamahuncutkai.hu/assets/favicon/android-chrome-512x512.png";
