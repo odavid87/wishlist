@@ -28,3 +28,16 @@ function add_item($who, $wish) {
     ];
     save_items($items);
 }
+
+function autolink($text) {
+    $pattern = '/\b((https?|ftp):\/\/|www\.)[^\s\/$.?#].[^\s]*\b/i';
+    $callback = function ($matches) {
+        $url = $matches[0];
+        $display_url = "[Hivatkozás]";
+        if (strpos($url, 'www.') === 0) {
+            $url = 'http://' . $url;
+        }
+        return '<a href="' . htmlspecialchars($url) . '" target="_blank" rel="noopener noreferrer" class="text-blue-600/100">' . htmlspecialchars($display_url) . '</a>';
+    };
+    return preg_replace_callback($pattern, $callback, $text);
+}

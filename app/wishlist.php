@@ -56,7 +56,7 @@ $items = array_reverse(load_items());
                     <li class="bg-gray-50 m-1 my-2 p-2 rounded-lg">
                         <div class="flex flex-col gap-2">
                             <strong class="text-base">⭐<?= $item['who'] ?>⭐ kívánsága</strong>
-                            <span class="text-sm"><?= nl2br($item['wish']) ?></span>
+                            <span class="text-sm"><?= nl2br(autolink($item['wish'])) ?></span>
                         </div>
                         <div class="flex gap-4 justify-end mt-2">
                             <a href="edit.php?id=<?= $item['id'] ?>" class="text-gray-400 hover:text-blue-500"><i class="fas fa-pencil-alt"></i></a>
