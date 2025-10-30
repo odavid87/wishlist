@@ -64,7 +64,7 @@ $items = array_reverse(load_items());
             <?php else: ?>
                 <?php foreach ($items as $item): ?>
                     <li class="bg-gray-50 m-1 p-2 rounded-lg">
-                        <div class="flex flex-col">
+                        <div class="flex flex-col gap-2">
                             <strong class="text-base">⭐<?= $item['who'] ?>⭐ kívánsága</strong>
                             <span class="text-sm"><?= nl2br($item['wish']) ?></span>
                         </div>
